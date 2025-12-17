@@ -393,3 +393,116 @@ body {
     max-width: 280px;
   }
 }
+
+/* ===================== HOME SUMMARY BOXES ===================== */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.summary-box {
+  background: #1e1e1e;
+  padding: 1.8rem;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summary-box h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.summary-box p {
+  line-height: 1.6;
+}
+
+/* Subtle hover lift (optional but nice) */
+.summary-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* ===================== HERO IMAGE ===================== */
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;           /* circular */
+  border: 3px solid var(--accent);
+}
+
+/* Mobile fallback */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ===================== CONTENT PAGES ===================== */
+
+.page-header {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* Main content wrapper */
+.page-content {
+  max-width: 1100px;   /* wider than before */
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Card-style sections */
+.content-card {
+  background: var(--bg-light);
+  padding: 2.5rem;
+  border-radius: 18px;
+  margin-bottom: 2.5rem;
+}
+
+.content-card h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.content-card p {
+  line-height: 1.8;
+  margin-bottom: 1.3rem;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .page-content {
+    padding: 1.5rem;
+  }
+
+  .content-card {
+    padding: 2rem;
+  }
+}
