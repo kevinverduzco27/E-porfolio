@@ -1,0 +1,395 @@
+:root {
+  --bg-dark: #121212;
+  --bg-light: #1e1e1e;
+  --accent: #f5c400;
+  --text: #f1f1f1;
+  --muted: #b0b0b0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #0b0b0b;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Nav list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;              /* spacing between tabs */
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #0b0b0b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Nav list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each clickable tab */
+.nav-item {
+  display: block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover state */
+.nav-item:hover {
+  background: rgba(245, 196, 0, 0.15);
+  color: var(--accent);
+}
+
+/* Active page */
+.nav-item.active {
+  background: rgba(245, 196, 0, 0.25);
+  color: var(--accent);
+}
+
+/* Contact button */
+.nav-item.btn {
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-item.btn:hover {
+  background: #e6b800;
+}
+
+
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+}
+
+.hero span {
+  color: var(--accent);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 2rem;
+}
+
+.section.dark {
+  background: var(--bg-light);
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #181818;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+
+/* ------------------------------------contact page------------------------------------  */
+/* PAGE HEADER  */ 
+.page-header {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.page-header p {
+  color: var(--muted);
+}
+
+/* CONTACT GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: #181818;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.contact-card a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--accent);
+}
+/* ------------------------------------ About Me------------------------------------  */
+
+.about-section {
+  padding-top: 2rem;
+}
+
+/* Gray background container */
+.about-container {
+  background: #1e1e1e; /* soft gray */
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Layout: images + text */
+.about-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Image column */
+.about-images img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* Text column */
+.about-text p {
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+}
+
+.about-text h2 {
+  margin-top: 2.5rem;
+  color: var(--accent);
+}
+
+/* Responsive fallback */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-images {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-images img {
+    max-width: 280px;
+  }
+}
+/* ===================== EXPERIENCE ===================== */
+
+.experience-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.job {
+  margin-bottom: 2.5rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.job-subheader {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.job ul {
+  margin-left: 1.2rem;
+}
+
+.cert-list li {
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+
+/* ===================== PROJECTS ===================== */
+
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.tab-btn {
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Project groups */
+.project-group {
+  display: none;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-group.active {
+  display: block;
+}
+
+/* Expandable project cards */
+.project-card {
+  background: #181818;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.project-card h3 {
+  margin: 0;
+  color: var(--accent);
+}
+
+/* Hidden details */
+.project-details {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+/* Expand on hover */
+.project-card:hover .project-details {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 0.8rem;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+/* ===================== STU 210 LOADOUT ===================== */
+
+.loadout-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: auto;
+  background: #1e1e1e;
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+/* Image box */
+.loadout-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #333;
+}
+
+/* Text */
+.loadout-text h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.loadout-text p {
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+/* Slight emphasis for reflection */
+.reflection-note {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Mobile fallback */
+@media (max-width: 900px) {
+  .loadout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .loadout-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .loadout-image img {
+    max-width: 280px;
+  }
+}
